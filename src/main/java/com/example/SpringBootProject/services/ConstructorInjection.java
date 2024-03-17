@@ -6,9 +6,11 @@ import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
+import org.springframework.stereotype.Service;
 
 
 @Log4j2
+@Service
 @RequiredArgsConstructor
 public class ConstructorInjection {
     private final Animal dog;
@@ -28,5 +30,4 @@ public class ConstructorInjection {
         cat.makeSound();
         dog.makeSound();
     }
-
 }
